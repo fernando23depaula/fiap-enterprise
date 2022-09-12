@@ -1,0 +1,15 @@
+{
+  "name": "EnterpriseConnect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "scripts": {
+    "sass": "node-sass -w ./resources/scss/ -o ./resources/css/ --recursive"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
