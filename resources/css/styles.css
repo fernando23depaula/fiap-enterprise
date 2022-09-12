@@ -172,3 +172,31 @@ main article {
       background-color: #e9e9e9;
       border: 1px solid #ccc;
       border-radius: 11px; }
+
+main form {
+  background-color: #fff;
+  padding: 15px; }
+  main form .row {
+    display: flex; }
+  main form h3 {
+    margin: 15px 0;
+    display: block; }
+  main form input {
+    height: 40px;
+    border-radius: 5px;
+    border: none; }
+    main form input:focus {
+      outline: none; }
+  main form .groups {
+    display: flex;
+    flex-direction: column;
+    width: 50%; }
+    main form .groups label {
+      margin-bottom: 5px; }
+  main form .botoes {
+    display: flex;
+    justify-content: flex-end; }
+    main form .botoes input[type='submit'] {
+      padding: 15px;
+      height: auto;
+      cursor: pointer; }

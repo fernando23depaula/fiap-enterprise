@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./resources/css/styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Enterprise Connect</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-flex">
+        <img
+          class="logo"
+          src="./resources/images/pngegg.png"
+          mime
+          alt="Logo Enterprise Connect"
+        />
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="personagens.html">Personagens</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <h1 class="title">Entre em contato conosco e agendamos sua viagem</h1>
+
+      <section id="contact">
+        <h2>Projeto Traveller - Planeja sua viagem</h2>
+        <br />
+        <form name="dados" id="dados">
+          <div class="row">
+            <h3>Dados pessoais:</h3>
+          </div>
+          <div class="row">
+            <div class="groups">
+              <label for="nome">Nome</label>
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="ex: Fernando Ferreira de Paula"
+                autofocus
+                required
+              />
+            </div>
+
+            <div class="groups">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                name="email"
+                id="nome"
+                placeholder="ex: seuemail@email.com"
+                autofocus
+                required
+              />
+            </div>
+
+            <div class="groups">
+              <label for="phone">Celular</label>
+
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="ex: (11) 9-9999-9999"
+                autofocus
+                required
+               
+              />
+            </div>
+          </div>
+
+          <hr />
+          <div class="row">
+            <h3>Destino:</h3>
+          </div>
+          <div class="row">
+            <div class="groups">
+              <label for="state">Estado</label>
+              <input
+                list="uf"
+                id="estados"
+                class="lista"
+                name="state"
+                required
+                placeholder="ex: Selecione o estado"
+              />
+              <datalist id="uf" onchange="getAddress()">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                <option value="EX">Estrangeiro</option>
+              </datalist>
+            </div>
+
+            <div class="groups">
+              <label for="cidades">Cidade</label>
+              <input
+                list="city"
+                id="cidades"
+                class="lista"
+                name="cidades"
+                required
+                placeholder="ex: Selecione o estado"
+              />
+              <datalist id="city"> </datalist>
+            </div>
+
+            <div class="groups">
+              <label for="dateTravel">Data da viagem</label>
+              <input
+                type="date"
+                id="data-travel"
+                name="dateTravel"
+                placeholder="ex: 23/05/2005"
+                autofocus
+                required
+              />
+            </div>
+          </div>
+
+          <hr />
+
+          <h3>Outras informações:</h3>
+          <div class="groups">
+            <label for="informacoes">Valor máximo da diária</label>
+            <div class="em__linha">
+              <input
+                type="number"
+                id="valor"
+                name="value"
+                placeholder="ex: 200.00"
+              />
+            </div>
+          </div>
+          <div class="groups">
+            <label for="informacoes">Mais informações</label>
+            <textarea
+              name="infos"
+              id="informações"
+              placeholder="Informações adicionais"
+            ></textarea>
+          </div>
+
+          <div class="botoes">
+            <input type="submit" value="Enviar" />
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="./resources/js/cep.js"></script>
+    <script src="./resources/js/postContact.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="./resources/js/main.js"></script>
+  </body>
+</html>
