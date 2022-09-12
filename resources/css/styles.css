@@ -27,10 +27,13 @@ body {
   justify-content: space-between; }
 
 .d-grid {
+  padding: 5px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(auto, 1fr));
   grid-auto-rows: minmax(auto, auto);
   grid-gap: 1.5em; }
+  @media screen and (min-width: 992px) {
+    .d-grid {
+      grid-template-columns: repeat(2, minmax(auto, 1fr)); } }
 
 #container-modal {
   position: fixed;
@@ -145,7 +148,8 @@ main article {
       margin-left: 5px;
       display: inline; }
   main article > div:last-of-type {
-    padding: 15px; }
+    padding: 15px;
+    width: 100%; }
     main article > div:last-of-type h4 {
       font-weight: bold;
       font-size: 1.2rem;

@@ -31,8 +31,11 @@ body {
 }
 
 .d-grid {
+  padding:5px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
   grid-auto-rows: minmax(auto, auto);
   grid-gap: 1.5em;
 }
@@ -178,6 +181,7 @@ main {
     > div {
       &:last-of-type {
         padding: 15px;
+        width: 100%;
         h4 {
           font-weight: bold;
           font-size: 1.2rem;
