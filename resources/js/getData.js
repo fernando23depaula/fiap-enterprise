@@ -1,4 +1,4 @@
-import dataJson from "../model/data.json" assert { type: "json" };
+import dataJson from "../model/data.js";
 
 const createElement = (element) => document.createElement(element);
 
