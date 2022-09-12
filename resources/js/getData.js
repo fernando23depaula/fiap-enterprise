@@ -1,5 +1,4 @@
 import dataJson from "../model/data.js";
-
 const createElement = (element) => document.createElement(element);
 
 const createAvaliacao = () => {
@@ -7,7 +6,7 @@ const createAvaliacao = () => {
   const avaliacao = createElement("div");
   for (let i = 0; i <= avaliacaoQtd; i++) {
     const imageStar = createElement("img");
-    imageStar.src = "../resources/images/estrela.png";
+    imageStar.src = "https://ik.imagekit.io/ew6lrcy5h/estrela_r9_8X4Kum.png?ik-sdk-version=javascript-1.4.3&updatedAt=1663007060990";
     avaliacao.append(imageStar);
   }
   avaliacao.classList.add("review");
