@@ -17,6 +17,12 @@ body {
   max-width: 1170px;
   margin: 0 auto; }
 
+.closed {
+  display: none !important; }
+
+.open {
+  display: flex !important; }
+
 .justify-content-between {
   justify-content: space-between; }
 
@@ -35,16 +41,34 @@ body {
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 1; }
 
 .modal-content {
   background-color: #fff;
-  max-width: 850px;
+  max-width: 590px;
   border-radius: 10px;
-  padding: 1.2rem; }
+  padding: 1.2rem;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 2; }
   .modal-content img {
     margin: 1rem auto;
-    display: block; }
+    display: block;
+    max-width: 100%; }
+  .modal-content h4 {
+    font-size: 1.3rem;
+    margin: 10px 0; }
+  .modal-content button {
+    position: absolute;
+    border: none;
+    background: transparent;
+    top: 2px;
+    right: 17px;
+    color: #686868;
+    cursor: pointer;
+    font-size: 1.5rem; }
 
 header {
   background: lightblue; }

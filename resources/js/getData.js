@@ -22,10 +22,20 @@ const createFigure = (image) => {
   return figure;
 };
 
-const buttonMaisDetalhes = () => {
+const buttonMaisDetalhes = (data) => {
+  console.log(data, 'data')
   const button = createElement("button");
   button.innerText = "Ver detalhes";
-  button.onclick = () => console.log("Olá!");
+  button.onclick = () => {
+    const modal = document.querySelector('#container-modal')
+    const contentModal = document.querySelector('.modal-content');
+    contentModal.querySelector('img').src = data.image
+    contentModal.querySelector('h4').innerText = data.name
+    contentModal.querySelector('#open-in span').innerText = data.openIn
+    contentModal.querySelector('#description').innerText = data.description
+    modal.classList.remove("closed")
+    modal.classList.add("open")
+  };
   return button;
 };
 
@@ -41,7 +51,7 @@ const createContent = (data) => {
   content.append(h4);
   content.append(p);
   content.append(createAvaliacao());
-  linebutton.append(buttonMaisDetalhes());
+  linebutton.append(buttonMaisDetalhes(data));
   content.append(linebutton);
   return content;
 };
@@ -65,4 +75,13 @@ const printPontosTuristicos = () => {
 
 (() => {
   printPontosTuristicos();
+  document.querySelector('.modal-content').onclick = function(e){
+    e.stopPropagation();
+  }
+
+  document.querySelector('#container-modal,#closed-modal').onclick = function(e){
+    console.log(e.target)
+    this.classList.remove('open')
+    this.classList.add('closed')
+  }
 })();

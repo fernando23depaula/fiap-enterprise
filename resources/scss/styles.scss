@@ -18,6 +18,14 @@ body {
   margin: 0 auto;
 }
 
+.closed {
+  display: none !important;
+}
+
+.open{
+  display: flex !important;
+}
+
 .justify-content-between {
   justify-content: space-between;
 }
@@ -39,16 +47,36 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .modal-content {
   background-color: #fff;
-  max-width: 850px;
+  max-width: 590px;
   border-radius: 10px;
   padding: 1.2rem;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 2;
   img {
     margin: 1rem auto;
     display: block;
+    max-width: 100%;
+  }
+  h4{
+    font-size: 1.3rem;
+    margin: 10px 0;
+  }
+  button {
+    position: absolute;
+    border: none;
+    background: transparent;
+    top: 2px;
+    right: 17px;
+    color: #686868;
+    cursor: pointer;
+    font-size: 1.5rem;
   }
 }
 header {
