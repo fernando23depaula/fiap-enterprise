@@ -1,4 +1,4 @@
-{
+export default {
   "data": [
     {
       "name": "Alcázar de Sevilha — Espanha",
